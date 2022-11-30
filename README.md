@@ -1,242 +1,103 @@
 <!DOCTYPE html>
 <html>
-	
+
 	<style>
 		body{
-			background-image: url("deep.jpg");
-			background-repeat: no-repeat;
-			background-attachment: fixed;
-			background-size: cover;
-			margin: 0; 
-			height: 100%; 
-			overflow: hidden
+			margin: 0;
 		}
 
+		/*plate der innhold legges*/
+		.container{ 
+			/*størrelse (vh/wh) basert på 1% person-høyde*/
+			width: 100vw;
+			height: 100vh;
 
-		.roedhai{
-			width: 431px;
-			height: 310px;
-			background-image: url("nyhai.png");
-			background-repeat: no-repeat;
-			transition: transform .4s;
-			margin: 0 auto;
-  			justify-content: center;
-  			margin-left: 22px;
+			font-family: monaco;
+			font-weight: bold;
+			font-size: 10px;
 
+			display: grid;
+			/*tre kolonner med en str på 1 fraksjon av gjenværende rom*/
+			grid-template-columns: repeat(5, 1fr);
+			/*lar design adaptere til størrelseendring av vindu*/
+			grid-template-rows: 50px 1fr 1fr 100px;
 
+			gap: 10px;
+			padding: 10px;
+			box-sizing: border-box;
 		}
 
-		.haabrann{
-			width: 555px;
-			height: 333px;
-			background-image: url("haabrann.png");
-			background-repeat: no-repeat;
-			transition: .4s;
-			margin: 0 auto;
-			justify-content: center;
-			border: 50px solid transparent;
+		.container div{
+			padding: 10px;
+			border: 1px solid rgb(255, 228, 245);
+			border-radius: 10px;
 		}
 
-		.haagjel{
-			width: 395px;
-			height: 134px;
-			background-image: url("haagjel.png");
-			background-repeat: no-repeat;
-			transition: .4s;
-			margin: 0 auto;
-			justify-content: center;
-			border: 50px solid transparent;
-			float: right;
-
-		}
-
-		.haakjaerring{
-			width: 513px;
-			height: 200px;
-			background-image: url("haakjerring.png");
-			background-repeat: no-repeat;
-			transition: .4s;
-			margin: 0 auto;
-			justify-content: center;
-			border: 50px solid transparent;
-			float: left;
-		}
-
-		.roedhai:hover{
-			transform: scale(1.1);
-			-webkit-filter: drop-shadow (1px 1px 0 rgb(240, 255, 255));
-			filter: drop-shadow(1px 1px 0 rgb(240, 255, 255))
-					drop-shadow(-1px -1px 0 rgb(240, 255, 255));
-			-webkit-transform: rotate(22deg);
-			-moz-transform: rotate(11deg);
-			-o-transform: rotate(11deg);
-			transform: rotate(11deg));
-		}
-
-		.roedhai::after{
-			content: "";
-		}
-
-		.roedhai:hover::after{
-			content: "rødhai";
-			font-family: "luminari";
-			display: block;
+		.header{
+			/*gridlinjenummer, linjer mellom rad og kolonne.
+			Får innhold til å dra sge over flere kolonner*/
+			grid-column-start: 2;
+			grid-column-end: 5;
 			text-align: center;
-			font-size: 40px;
-			top: 0;
-			text-shadow: 1px 1px 2px rgb(255, 0, 0), 0 0 1em rgb(255, 165, 0), 0 0 0.2em rgb(255, 165, 0);
 		}
 
-		.haabrann:hover{
-			transform: scale(1.1);
-			-webkit-filter: drop-shadow(1px 1px 0 rgb(0, 0, 255));
-			filter: drop-shadow(1px 1px 0 rgb(240, 255, 255))
-					drop-shadow(1px 1px 0 rgb(240, 255, 255));
-			-webkit-transform: rotate(360deg);
-			-moz-transform: rotate(360deg);
-			-o-transform: rotate(360deg);
-			transform: rotate(360deg));
+		.content{
+			/* starter på 2. rad, da 1. rad er tatt av header*/
+			grid-row-start: 2;
+			/*drar seg over 4 rader*/
+			grid-row-end: span 3;
+			grid-column-start: 3;
+			grid-column-end: 5;
+			background-color: pink;
+			overflow: auto;
+			border-radius: 10px
+			padding: 10px;
 		}
 
-		.haabrann::after{
-			content: "";
+		.sidebar{
+			grid-row-start: 2;
+			grid-row-end: span 3;
+			grid-column-start: 2;
+			grid-column-end: 2;
 		}
 
-		.haabrann:hover::after{
-			content: "håbrann";
-			font-family: "luminari";
-			display: block;
-			text-align: center;
-			font-size: 40px;
-			top: 0;
-			text-shadow: 1px 1px 2px rgb(25, 25, 112), 0 0 1em rgb(0, 0, 255), 0 0 0.2em rgb(0, 0, 255);	
-		}
+		.footer{
 
-		.haagjel:hover{
-			transform: scale(1.1);
-			-webkit-filter: drop-shadow(1px 1px 0 rgb(240, 255, 255));
-			filter: drop-shadow(1px 1px 0 rgb(240, 255, 255))
-					drop-shadow(-1px -1px 0 rgb(240, 255, 255));
-			-webkit-transform: rotate(22deg);
-			-moz-transform: rotate(22deg);
-			-o-transform: rotate(22deg);
-			transform: rotate(22deg));
+			/*snarvei for de tidligere start/end-funksjonene*/
+			grid-column: 2/span 3;
 		}
-		.haagjel::after{
-			content: "";
-		}
-
-		.haagjel:hover::after{
-			content: "hågjel";
-			font-family: "luminari";
-			display: block;
-			text-align: center;
-			font-size: 40px;
-			top: 0;
-			text-shadow: 1px 1px 2px rgb(102, 51, 153), 0 0 1em rgb(147, 112, 219), 0 0 0.2em rgb(147, 112, 219);
-		}
-
-		.haakjaerring:hover{
-			transform: scale(1.1);
-			-webkit-filter: drop-shadow(1px 1px 0 rgb(240, 255, 255));
-			filter: drop-shadow(1px 1px 0 rgb(240, 255, 255))
-					drop-shadow(-1px -1px 0 rgb(240, 255, 255));
-			-webkit-transform: rotate(22deg);
-			-moz-transform: rotate(22deg);
-			-o-transform: rotate(22deg);
-			transform: rotate(22deg));
-
-		}
-
-		.haakjaerring::after{
-			content: "";
-		}
-
-		.haakjaerring:hover::after{
-			content: "håkjærring";
-			font-family: "luminari";
-			display: block;
-			text-align: center;
-			font-size: 40px;
-			top: 0;
-			text-shadow: 1px 1px 2px rgb(85, 107, 47), 0 0 1em rgb(128, 128, 0), 0 0 0.2em rgb(128, 128, 0);
-			
-		}
-
-		.box:hover{
-			box-shadow: 0 0 200px
-			rgba(33,33,33,.2);
-		}
-
-		.div-wrapper-RH{
+		/*
+		.box-content{
+			height: 565px;
+			width: 518px;
+			overflow: auto;
+			border-radius: 10px
+			padding: 10px;
 			position: relative;
-			left: 0;
-			top: 0;
 		}
-
-
-		.div-wrapper-HB{
-			position: relative;
-			right: 0;
-			top: 0px;
-		}
-
-		.div-wrapper-HG{
-			position: relative;
-			right: 0;
-			top: -60px;
-		}
-
-		.div-wrapper-HK{
-			position: relative;
-			right: 3px;
-			top: -200px;
-		}
-
-		.row{
-			display: flex;
-		}
-		.column{
-			flex: 33.33%;
-			padding: flex;
-		}
+		*/
 
 	</style>
+
+	<body>
+		
+		 <div class = "container">
+		 	<div class = "header"> 
+		 		header
+		 	</div>
+		 	
+		 	<div class = "content">
+		 		content
+		 	</div>
+		 	<div class = "sidebar">
+		 	</div>
+		 	<div class = "footer">
+		 		<marquee scrollamount = "10" direction = "right" behaviour = "scroll">
+		 			veslemøy
+		 		</marquee>
+		 	</div>
+		 </div>
+		
+	</body>
 	
-		<marquee scrollamount = "10" direction = "right"
-		behaviour = "scroll">
-			<h1 style = 
-			"text-shadow: 1px 1px 2px red, 0 0 1em orange, 0 0 0.2em orange">
-				<strong> SHARKS OF NORWAY </strong>
-			</h1>
-
-		</marquee>
-		<div class = "row">	
-			<div class = "div-wrapper-RH">
-				<div class = "roedhai">
-				</div>
-			</div>
-			
-			<div class = "div-wrapper-HB">
-				<div class = "haabrann">
-				</div>
-			</div>
-			
-		</div>
-		<div class = "row">
-			<div class ="column">
-				<div class = "div-wrapper-HG">
-					<div class = "haagjel">
-					</div>
-				</div>
-				<div class = "div-wrapper-HK">
-					<div class = "haakjaerring">
-					</div>
-				</div>
-			</div>
-
-			<div class = "box">
-			</div>
-		</div>
-
 </html>
