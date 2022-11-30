@@ -1,1 +1,241 @@
-# veslemoyandersen.github.io
+<html>
+	
+	<style>
+		
+		body{
+			margin: 0;
+			background-color: rgb(240, 255, 255)
+
+		}
+
+		.grid{
+			margin: 20px auto;
+			width: 400px;
+			height: 400px;
+			display: grid;
+			grid-template-columns: 200px 200px;
+			grid-row: auto auto;
+			grid-row-gap: 10px;
+			grid-column-gap: 40px;
+			justify-content: center;
+			margin-top: 34px; 
+		}
+
+		.icon1{
+			height: 113px;
+			width: 173px;
+			justify-content: center;
+			float: center;
+			padding: 0;
+			margin: 0;
+			margin-top: 10px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-image: url("ivory.png")
+		}
+
+		.icon1 span{
+			display: block;
+			text-align: center;
+			color: rgb(255, 69, 0);
+			font-family: "copperplate";
+			font-size: 20px;
+	
+		}
+
+		.icon1::after{
+			content: "";
+		}
+
+		.icon1:hover::after{
+			content: "About";
+			font-family: "copperplate";
+			display: block;
+			text-align: center;
+			font-size: 20px;
+			color: rgb(255, 69, 0);
+			text-shadow: 1px 1px 2px rgb(255, 165, 0), 0 0 1em rgb(255, 165, 0), 0 0 0.2em rgb(255, 165, 0);
+		}
+
+		.icon2{
+			height: 100px;
+			width: 100px;
+			justify-content: center;
+			float: center;
+			padding: 0;
+			margin: 0;
+			margin-top: 10px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-image: url("candy.png")
+		}
+
+		.icon2 span{
+			display: block;
+			text-align: center;
+			color: rgb(255, 69, 0);
+			font-family: "copperplate";
+			font-size: 20px;
+		}
+
+		.icon2::after{
+			content: "";
+		}
+
+		.icon2:hover::after{
+			content: "Help";
+			font-family: "copperplate";
+			display: block;
+			text-align: center;
+			font-size: 20px;
+			color: rgb(255, 69, 0);
+			text-shadow: 1px 1px 2px rgb(255, 165, 0), 0 0 1em rgb(255, 165, 0), 0 0 0.2em rgb(255, 165, 0);
+		}
+
+		.icon3{
+			height: 113px;
+			width: 150px;
+			justify-content: center;
+			float: center;
+			padding: 0;
+			margin: 0;
+			margin-top: 10px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-image: url("nudibeige.png");
+		}
+
+		.icon3 span{
+			display: block;
+			text-align: center;
+			color: rgb(255, 69, 0);
+			font-family: "copperplate";
+			font-size: 20px;
+		}
+
+		.icon3::after{
+			content: "";
+		}
+
+		.icon3:hover::after{
+			content: "What";
+			font-family: "copperplate";
+			display: block;
+			text-align: center;
+			font-size: 20px;
+			color: rgb(255, 69, 0);
+			text-shadow: 1px 1px 2px rgb(255, 165, 0), 0 0 1em rgb(255, 165, 0), 0 0 0.2em rgb(255, 165, 0);
+		}
+
+		.box{
+			width: 200px;
+			height: 200px;
+			margin: 50px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 10px;
+			border: 3px solid;
+			transition: box-shadow .3s;
+			float: center;
+			padding: 5;
+			margin: 5;
+		}
+
+
+		.shark::after{
+			content: "sharks of norway";
+			font-family: "monaco";
+			text-shadow: 1px 1px 2px red, 0 0 1em rgb(255, 165, 0), 0 0 0.2em rgb(255, 165, 0);
+		}
+
+		.shark:hover::after{
+			content: "blubb blubb blubb";
+			font-family: "monaco";
+			text-shadow: rgb(0, 0, 139) 1px 0 10px;
+			color: rgb(25, 25, 112);
+		}
+		
+		.box:hover{
+			box-shadow: 0 0 40px
+			rgb(255, 165, 0)
+		}
+
+		.icon1:hover{
+			transform: scale(1.1);
+			-webkit-filter: drop-shadow(1px 1px 0) rgb(255, 165, 0);
+				filter: drop-shadow(1px 1px 0 rgb(255, 165, 0)) 
+					drop-shadow(-1px -1px 0 rgb(255, 165, 0));
+			text-shadow: 1px 1px 2px rgb(255, 165, 0), 0 0 1em rgb(255, 165, 0), 0 0 0.2em rgb(255, 165, 0);
+			-webkit-transform: rotate(22deg);
+			-moz-transform: rotate(22deg);
+			-o-transform: rotate(22deg);
+			transform: rotate(22deg);	
+		}
+
+		.icon2:hover{
+			transform: scale(1.1);
+			-webkit-filter: drop-shadow(1px 1px 0) rgb(255, 165, 0);
+				filter: drop-shadow(1px 1px 0 rgb(255, 165, 0)) 
+					drop-shadow(-1px -1px 0 rgb(255, 165, 0));
+			text-shadow: 1px 1px 2px rgb(255, 165, 0), 0 0 1em rgb(255, 165, 0), 0 0 0.2em rgb(255, 165, 0);
+			-webkit-transform: rotate(22deg);
+			-moz-transform: rotate(22deg);
+			-o-transform: rotate(22deg);
+			transform: rotate(22deg);	
+		}
+
+		.icon3:hover{
+			transform: scale(1.1);
+			-webkit-filter: drop-shadow(1px 1px 0) rgb(255, 165, 0);
+				filter: drop-shadow(1px 1px 0 rgb(255, 165, 0)) 
+					drop-shadow(-1px -1px 0 rgb(255, 165, 0));
+			text-shadow: 1px 1px 2px rgb(255, 165, 0), 0 0 1em rgb(255, 165, 0), 0 0 0.2em rgb(255, 165, 0);
+			-webkit-transform: rotate(22deg);
+			-moz-transform: rotate(22deg);
+			-o-transform: rotate(22deg);
+			transform: rotate(22deg);	
+		}
+
+		.row{
+			display: flex;
+			justify-content: center;
+		}
+
+		.wrapper{
+			position: relative;
+			justify-content: center;
+			visibility: hidden;
+		}
+
+		
+
+	</style>
+
+	<div class = "row">
+		<div class = "icon1">
+			<!--<span> about </span>-->
+		</div>
+		<div class = "icon2">
+			<!--<span> what </span>--->
+		</div>
+		<div class = "icon3">
+			<!--<span> help </span>-->
+		</div>
+	</div>
+	<div class = "grid">
+		<div class ="box" style="border-color: rgb(255, 000, 000)">
+			<span class ="shark">
+			</span>
+		</div>
+		<div class ="box" style="border-color: rgb(255, 225, 000)">
+		</div>
+		<div class ="box" style="border-color: rgb(000, 000, 255)">
+		</div>
+		<div class ="box" style="border-color: rgb(000, 245, 000)">
+		</div>
+		
+	</div>
+	
+
+</html>
