@@ -1,241 +1,242 @@
+<!DOCTYPE html>
 <html>
 	
 	<style>
-		
 		body{
-			margin: 0;
-			background-color: rgb(240, 255, 255)
-
-		}
-
-		.grid{
-			margin: 20px auto;
-			width: 400px;
-			height: 400px;
-			display: grid;
-			grid-template-columns: 200px 200px;
-			grid-row: auto auto;
-			grid-row-gap: 10px;
-			grid-column-gap: 40px;
-			justify-content: center;
-			margin-top: 34px; 
-		}
-
-		.icon1{
-			height: 113px;
-			width: 173px;
-			justify-content: center;
-			float: center;
-			padding: 0;
-			margin: 0;
-			margin-top: 10px;
+			background-image: url("deep.jpg");
 			background-repeat: no-repeat;
+			background-attachment: fixed;
 			background-size: cover;
-			background-image: url("ivory.png")
+			margin: 0; 
+			height: 100%; 
+			overflow: hidden
 		}
 
-		.icon1 span{
-			display: block;
-			text-align: center;
-			color: rgb(255, 69, 0);
-			font-family: "copperplate";
-			font-size: 20px;
-	
-		}
 
-		.icon1::after{
-			content: "";
-		}
-
-		.icon1:hover::after{
-			content: "About";
-			font-family: "copperplate";
-			display: block;
-			text-align: center;
-			font-size: 20px;
-			color: rgb(255, 69, 0);
-			text-shadow: 1px 1px 2px rgb(255, 165, 0), 0 0 1em rgb(255, 165, 0), 0 0 0.2em rgb(255, 165, 0);
-		}
-
-		.icon2{
-			height: 100px;
-			width: 100px;
-			justify-content: center;
-			float: center;
-			padding: 0;
-			margin: 0;
-			margin-top: 10px;
+		.roedhai{
+			width: 431px;
+			height: 310px;
+			background-image: url("nyhai.png");
 			background-repeat: no-repeat;
-			background-size: cover;
-			background-image: url("candy.png")
+			transition: transform .4s;
+			margin: 0 auto;
+  			justify-content: center;
+  			margin-left: 22px;
+
+
 		}
 
-		.icon2 span{
-			display: block;
-			text-align: center;
-			color: rgb(255, 69, 0);
-			font-family: "copperplate";
-			font-size: 20px;
-		}
-
-		.icon2::after{
-			content: "";
-		}
-
-		.icon2:hover::after{
-			content: "Help";
-			font-family: "copperplate";
-			display: block;
-			text-align: center;
-			font-size: 20px;
-			color: rgb(255, 69, 0);
-			text-shadow: 1px 1px 2px rgb(255, 165, 0), 0 0 1em rgb(255, 165, 0), 0 0 0.2em rgb(255, 165, 0);
-		}
-
-		.icon3{
-			height: 113px;
-			width: 150px;
-			justify-content: center;
-			float: center;
-			padding: 0;
-			margin: 0;
-			margin-top: 10px;
+		.haabrann{
+			width: 555px;
+			height: 333px;
+			background-image: url("haabrann.png");
 			background-repeat: no-repeat;
-			background-size: cover;
-			background-image: url("nudibeige.png");
+			transition: .4s;
+			margin: 0 auto;
+			justify-content: center;
+			border: 50px solid transparent;
 		}
 
-		.icon3 span{
-			display: block;
-			text-align: center;
-			color: rgb(255, 69, 0);
-			font-family: "copperplate";
-			font-size: 20px;
+		.haagjel{
+			width: 395px;
+			height: 134px;
+			background-image: url("haagjel.png");
+			background-repeat: no-repeat;
+			transition: .4s;
+			margin: 0 auto;
+			justify-content: center;
+			border: 50px solid transparent;
+			float: right;
+
 		}
 
-		.icon3::after{
-			content: "";
-		}
-
-		.icon3:hover::after{
-			content: "What";
-			font-family: "copperplate";
-			display: block;
-			text-align: center;
-			font-size: 20px;
-			color: rgb(255, 69, 0);
-			text-shadow: 1px 1px 2px rgb(255, 165, 0), 0 0 1em rgb(255, 165, 0), 0 0 0.2em rgb(255, 165, 0);
-		}
-
-		.box{
-			width: 200px;
+		.haakjaerring{
+			width: 513px;
 			height: 200px;
-			margin: 50px;
-			display: flex;
-			align-items: center;
+			background-image: url("haakjerring.png");
+			background-repeat: no-repeat;
+			transition: .4s;
+			margin: 0 auto;
 			justify-content: center;
-			border-radius: 10px;
-			border: 3px solid;
-			transition: box-shadow .3s;
-			float: center;
-			padding: 5;
-			margin: 5;
+			border: 50px solid transparent;
+			float: left;
 		}
 
-
-		.shark::after{
-			content: "sharks of norway";
-			font-family: "monaco";
-			text-shadow: 1px 1px 2px red, 0 0 1em rgb(255, 165, 0), 0 0 0.2em rgb(255, 165, 0);
+		.roedhai:hover{
+			transform: scale(1.1);
+			-webkit-filter: drop-shadow (1px 1px 0 rgb(240, 255, 255));
+			filter: drop-shadow(1px 1px 0 rgb(240, 255, 255))
+					drop-shadow(-1px -1px 0 rgb(240, 255, 255));
+			-webkit-transform: rotate(22deg);
+			-moz-transform: rotate(11deg);
+			-o-transform: rotate(11deg);
+			transform: rotate(11deg));
 		}
 
-		.shark:hover::after{
-			content: "blubb blubb blubb";
-			font-family: "monaco";
-			text-shadow: rgb(0, 0, 139) 1px 0 10px;
-			color: rgb(25, 25, 112);
+		.roedhai::after{
+			content: "";
 		}
-		
+
+		.roedhai:hover::after{
+			content: "rødhai";
+			font-family: "luminari";
+			display: block;
+			text-align: center;
+			font-size: 40px;
+			top: 0;
+			text-shadow: 1px 1px 2px rgb(255, 0, 0), 0 0 1em rgb(255, 165, 0), 0 0 0.2em rgb(255, 165, 0);
+		}
+
+		.haabrann:hover{
+			transform: scale(1.1);
+			-webkit-filter: drop-shadow(1px 1px 0 rgb(0, 0, 255));
+			filter: drop-shadow(1px 1px 0 rgb(240, 255, 255))
+					drop-shadow(1px 1px 0 rgb(240, 255, 255));
+			-webkit-transform: rotate(360deg);
+			-moz-transform: rotate(360deg);
+			-o-transform: rotate(360deg);
+			transform: rotate(360deg));
+		}
+
+		.haabrann::after{
+			content: "";
+		}
+
+		.haabrann:hover::after{
+			content: "håbrann";
+			font-family: "luminari";
+			display: block;
+			text-align: center;
+			font-size: 40px;
+			top: 0;
+			text-shadow: 1px 1px 2px rgb(25, 25, 112), 0 0 1em rgb(0, 0, 255), 0 0 0.2em rgb(0, 0, 255);	
+		}
+
+		.haagjel:hover{
+			transform: scale(1.1);
+			-webkit-filter: drop-shadow(1px 1px 0 rgb(240, 255, 255));
+			filter: drop-shadow(1px 1px 0 rgb(240, 255, 255))
+					drop-shadow(-1px -1px 0 rgb(240, 255, 255));
+			-webkit-transform: rotate(22deg);
+			-moz-transform: rotate(22deg);
+			-o-transform: rotate(22deg);
+			transform: rotate(22deg));
+		}
+		.haagjel::after{
+			content: "";
+		}
+
+		.haagjel:hover::after{
+			content: "hågjel";
+			font-family: "luminari";
+			display: block;
+			text-align: center;
+			font-size: 40px;
+			top: 0;
+			text-shadow: 1px 1px 2px rgb(102, 51, 153), 0 0 1em rgb(147, 112, 219), 0 0 0.2em rgb(147, 112, 219);
+		}
+
+		.haakjaerring:hover{
+			transform: scale(1.1);
+			-webkit-filter: drop-shadow(1px 1px 0 rgb(240, 255, 255));
+			filter: drop-shadow(1px 1px 0 rgb(240, 255, 255))
+					drop-shadow(-1px -1px 0 rgb(240, 255, 255));
+			-webkit-transform: rotate(22deg);
+			-moz-transform: rotate(22deg);
+			-o-transform: rotate(22deg);
+			transform: rotate(22deg));
+
+		}
+
+		.haakjaerring::after{
+			content: "";
+		}
+
+		.haakjaerring:hover::after{
+			content: "håkjærring";
+			font-family: "luminari";
+			display: block;
+			text-align: center;
+			font-size: 40px;
+			top: 0;
+			text-shadow: 1px 1px 2px rgb(85, 107, 47), 0 0 1em rgb(128, 128, 0), 0 0 0.2em rgb(128, 128, 0);
+			
+		}
+
 		.box:hover{
-			box-shadow: 0 0 40px
-			rgb(255, 165, 0)
+			box-shadow: 0 0 200px
+			rgba(33,33,33,.2);
 		}
 
-		.icon1:hover{
-			transform: scale(1.1);
-			-webkit-filter: drop-shadow(1px 1px 0) rgb(255, 165, 0);
-				filter: drop-shadow(1px 1px 0 rgb(255, 165, 0)) 
-					drop-shadow(-1px -1px 0 rgb(255, 165, 0));
-			text-shadow: 1px 1px 2px rgb(255, 165, 0), 0 0 1em rgb(255, 165, 0), 0 0 0.2em rgb(255, 165, 0);
-			-webkit-transform: rotate(22deg);
-			-moz-transform: rotate(22deg);
-			-o-transform: rotate(22deg);
-			transform: rotate(22deg);	
+		.div-wrapper-RH{
+			position: relative;
+			left: 0;
+			top: 0;
 		}
 
-		.icon2:hover{
-			transform: scale(1.1);
-			-webkit-filter: drop-shadow(1px 1px 0) rgb(255, 165, 0);
-				filter: drop-shadow(1px 1px 0 rgb(255, 165, 0)) 
-					drop-shadow(-1px -1px 0 rgb(255, 165, 0));
-			text-shadow: 1px 1px 2px rgb(255, 165, 0), 0 0 1em rgb(255, 165, 0), 0 0 0.2em rgb(255, 165, 0);
-			-webkit-transform: rotate(22deg);
-			-moz-transform: rotate(22deg);
-			-o-transform: rotate(22deg);
-			transform: rotate(22deg);	
+
+		.div-wrapper-HB{
+			position: relative;
+			right: 0;
+			top: 0px;
 		}
 
-		.icon3:hover{
-			transform: scale(1.1);
-			-webkit-filter: drop-shadow(1px 1px 0) rgb(255, 165, 0);
-				filter: drop-shadow(1px 1px 0 rgb(255, 165, 0)) 
-					drop-shadow(-1px -1px 0 rgb(255, 165, 0));
-			text-shadow: 1px 1px 2px rgb(255, 165, 0), 0 0 1em rgb(255, 165, 0), 0 0 0.2em rgb(255, 165, 0);
-			-webkit-transform: rotate(22deg);
-			-moz-transform: rotate(22deg);
-			-o-transform: rotate(22deg);
-			transform: rotate(22deg);	
+		.div-wrapper-HG{
+			position: relative;
+			right: 0;
+			top: -60px;
+		}
+
+		.div-wrapper-HK{
+			position: relative;
+			right: 3px;
+			top: -200px;
 		}
 
 		.row{
 			display: flex;
-			justify-content: center;
 		}
-
-		.wrapper{
-			position: relative;
-			justify-content: center;
-			visibility: hidden;
+		.column{
+			flex: 33.33%;
+			padding: flex;
 		}
-
-		
 
 	</style>
-
-	<div class = "row">
-		<div class = "icon1">
-			<!--<span> about </span>-->
-		</div>
-		<div class = "icon2">
-			<!--<span> what </span>--->
-		</div>
-		<div class = "icon3">
-			<!--<span> help </span>-->
-		</div>
-	</div>
-	<div class = "grid">
-		<div class ="box" style="border-color: rgb(255, 000, 000)">
-			<span class ="shark">
-			</span>
-		</div>
-		<div class ="box" style="border-color: rgb(255, 225, 000)">
-		</div>
-		<div class ="box" style="border-color: rgb(000, 000, 255)">
-		</div>
-		<div class ="box" style="border-color: rgb(000, 245, 000)">
-		</div>
-		
-	</div>
 	
+		<marquee scrollamount = "10" direction = "right"
+		behaviour = "scroll">
+			<h1 style = 
+			"text-shadow: 1px 1px 2px red, 0 0 1em orange, 0 0 0.2em orange">
+				<strong> SHARKS OF NORWAY </strong>
+			</h1>
+
+		</marquee>
+		<div class = "row">	
+			<div class = "div-wrapper-RH">
+				<div class = "roedhai">
+				</div>
+			</div>
+			
+			<div class = "div-wrapper-HB">
+				<div class = "haabrann">
+				</div>
+			</div>
+			
+		</div>
+		<div class = "row">
+			<div class ="column">
+				<div class = "div-wrapper-HG">
+					<div class = "haagjel">
+					</div>
+				</div>
+				<div class = "div-wrapper-HK">
+					<div class = "haakjaerring">
+					</div>
+				</div>
+			</div>
+
+			<div class = "box">
+			</div>
+		</div>
 
 </html>
