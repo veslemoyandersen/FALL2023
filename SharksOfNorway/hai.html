@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+	
+	<style>
+		body{
+			background-image: url("deep.jpg");
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			margin: 0; 
+			height: 100%; 
+			overflow: hidden
+		}
+
+
+		.roedhai{
+			width: 431px;
+			height: 310px;
+			background-image: url("nyhai.png");
+			background-repeat: no-repeat;
+			transition: transform .4s;
+			margin: 0 auto;
+  			justify-content: center;
+  			margin-left: 22px;
+
+
+		}
+
+		.haabrann{
+			width: 555px;
+			height: 333px;
+			background-image: url("haabrann.png");
+			background-repeat: no-repeat;
+			transition: .4s;
+			margin: 0 auto;
+			justify-content: center;
+			border: 50px solid transparent;
+		}
+
+		.haagjel{
+			width: 395px;
+			height: 134px;
+			background-image: url("haagjel.png");
+			background-repeat: no-repeat;
+			transition: .4s;
+			margin: 0 auto;
+			justify-content: center;
+			border: 50px solid transparent;
+			float: right;
+
+		}
+
+		.haakjaerring{
+			width: 513px;
+			height: 200px;
+			background-image: url("haakjerring.png");
+			background-repeat: no-repeat;
+			transition: .4s;
+			margin: 0 auto;
+			justify-content: center;
+			border: 50px solid transparent;
+			float: left;
+		}
+
+		.roedhai:hover{
+			transform: scale(1.1);
+			-webkit-filter: drop-shadow (1px 1px 0 rgb(240, 255, 255));
+			filter: drop-shadow(1px 1px 0 rgb(240, 255, 255))
+					drop-shadow(-1px -1px 0 rgb(240, 255, 255));
+			-webkit-transform: rotate(22deg);
+			-moz-transform: rotate(11deg);
+			-o-transform: rotate(11deg);
+			transform: rotate(11deg));
+		}
+
+		.roedhai::after{
+			content: "";
+		}
+
+		.roedhai:hover::after{
+			content: "rødhai";
+			font-family: "luminari";
+			display: block;
+			text-align: center;
+			font-size: 40px;
+			top: 0;
+			text-shadow: 1px 1px 2px rgb(255, 0, 0), 0 0 1em rgb(255, 165, 0), 0 0 0.2em rgb(255, 165, 0);
+		}
+
+		.haabrann:hover{
+			transform: scale(1.1);
+			-webkit-filter: drop-shadow(1px 1px 0 rgb(0, 0, 255));
+			filter: drop-shadow(1px 1px 0 rgb(240, 255, 255))
+					drop-shadow(1px 1px 0 rgb(240, 255, 255));
+			-webkit-transform: rotate(360deg);
+			-moz-transform: rotate(360deg);
+			-o-transform: rotate(360deg);
+			transform: rotate(360deg));
+		}
+
+		.haabrann::after{
+			content: "";
+		}
+
+		.haabrann:hover::after{
+			content: "håbrann";
+			font-family: "luminari";
+			display: block;
+			text-align: center;
+			font-size: 40px;
+			top: 0;
+			text-shadow: 1px 1px 2px rgb(25, 25, 112), 0 0 1em rgb(0, 0, 255), 0 0 0.2em rgb(0, 0, 255);	
+		}
+
+		.haagjel:hover{
+			transform: scale(1.1);
+			-webkit-filter: drop-shadow(1px 1px 0 rgb(240, 255, 255));
+			filter: drop-shadow(1px 1px 0 rgb(240, 255, 255))
+					drop-shadow(-1px -1px 0 rgb(240, 255, 255));
+			-webkit-transform: rotate(22deg);
+			-moz-transform: rotate(22deg);
+			-o-transform: rotate(22deg);
+			transform: rotate(22deg));
+		}
+		.haagjel::after{
+			content: "";
+		}
+
+		.haagjel:hover::after{
+			content: "hågjel";
+			font-family: "luminari";
+			display: block;
+			text-align: center;
+			font-size: 40px;
+			top: 0;
+			text-shadow: 1px 1px 2px rgb(102, 51, 153), 0 0 1em rgb(147, 112, 219), 0 0 0.2em rgb(147, 112, 219);
+		}
+
+		.haakjaerring:hover{
+			transform: scale(1.1);
+			-webkit-filter: drop-shadow(1px 1px 0 rgb(240, 255, 255));
+			filter: drop-shadow(1px 1px 0 rgb(240, 255, 255))
+					drop-shadow(-1px -1px 0 rgb(240, 255, 255));
+			-webkit-transform: rotate(22deg);
+			-moz-transform: rotate(22deg);
+			-o-transform: rotate(22deg);
+			transform: rotate(22deg));
+
+		}
+
+		.haakjaerring::after{
+			content: "";
+		}
+
+		.haakjaerring:hover::after{
+			content: "håkjærring";
+			font-family: "luminari";
+			display: block;
+			text-align: center;
+			font-size: 40px;
+			top: 0;
+			text-shadow: 1px 1px 2px rgb(85, 107, 47), 0 0 1em rgb(128, 128, 0), 0 0 0.2em rgb(128, 128, 0);
+			
+		}
+
+		.box:hover{
+			box-shadow: 0 0 200px
+			rgba(33,33,33,.2);
+		}
+
+		.div-wrapper-RH{
+			position: relative;
+			left: 0;
+			top: 0;
+		}
+
+
+		.div-wrapper-HB{
+			position: relative;
+			right: 0;
+			top: 0px;
+		}
+
+		.div-wrapper-HG{
+			position: relative;
+			right: 0;
+			top: -60px;
+		}
+
+		.div-wrapper-HK{
+			position: relative;
+			right: 3px;
+			top: -200px;
+		}
+
+		.row{
+			display: flex;
+		}
+		.column{
+			flex: 33.33%;
+			padding: flex;
+		}
+
+	</style>
+	
+		<marquee scrollamount = "10" direction = "right"
+		behaviour = "scroll">
+			<h1 style = 
+			"text-shadow: 1px 1px 2px red, 0 0 1em orange, 0 0 0.2em orange">
+				<strong> SHARKS OF NORWAY </strong>
+			</h1>
+
+		</marquee>
+		<div class = "row">	
+			<div class = "div-wrapper-RH">
+				<div class = "roedhai">
+				</div>
+			</div>
+			
+			<div class = "div-wrapper-HB">
+				<div class = "haabrann">
+				</div>
+			</div>
+			
+		</div>
+		<div class = "row">
+			<div class ="column">
+				<div class = "div-wrapper-HG">
+					<div class = "haagjel">
+					</div>
+				</div>
+				<div class = "div-wrapper-HK">
+					<div class = "haakjaerring">
+					</div>
+				</div>
+			</div>
+
+			<div class = "box">
+			</div>
+		</div>
+
+</html>
